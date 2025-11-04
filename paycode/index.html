@@ -188,7 +188,8 @@
             const localStorageKey = 'TomyJan-PayCode-AliPay-RedPack-LastReceiveTime/V1';
             const lastReceiveTime = localStorage.getItem(localStorageKey);
             const nowTime = Date.now();
-            if (lastReceiveTime && nowTime - lastReceiveTime < 24 * 60 * 60 * 1000) {
+            const jumpToRedPack = false; // 因为支付宝加强了检测, 这里关掉领红包跳转
+            if (!jumpToRedPack || (lastReceiveTime && nowTime - lastReceiveTime < 24 * 60 * 60 * 1000)) {
                 window.location.href = config.alipay.link;
             } else {
                 document.getElementById('alipay-logo').src = config.alipay.logo;
