@@ -1,0 +1,16 @@
+{
+  "name": "tomyjan-web-static",
+  "__intro__": "https://edgeone.cloud.tencent.com/pages/document/162936771610066944",
+  "redirects": [
+    {
+      "source": "/paycode",
+      "destination": "/paycode/",
+      "statusCode": 301
+    },
+    {
+      "source": "/AliPayNfcTagGenerator",
+      "destination": "/AliPayNfcTagGenerator/",
+      "statusCode": 301
+    }
+  ]
+}
